@@ -1,0 +1,13 @@
+import unittest
+from chain_of_responsibility_2 import {% for handler in handlers %}{{ handler }}, {% endfor %}EmailProcessor
+
+class EmailProcessorTest(unittest.TestCase):
+{% for case in test_cases %}
+    def test_{{ case.name }}(self):
+        processor = EmailProcessor()
+        {% for handler in case.handlers -%}
+        processor.add_handler({{ handler }}())
+        {% endfor -%}
+        result = processor.process("{{ case.input }}")
+        self.assertEqual(result, "{{ case.expected }}")
+{% endfor %}

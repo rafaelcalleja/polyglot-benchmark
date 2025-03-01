@@ -1,0 +1,10 @@
+{
+  "authors": ["exercism"],
+  "contributors": [],
+  "files": {
+    "solution": ["chain_of_responsibility_2.py"],
+    "test": ["chain_of_responsibility_2_test.py"],
+    "exemplar": [".meta/example.py"]
+  },
+  "forbidden": ["re", "json", "yaml", "pickle"]
+}

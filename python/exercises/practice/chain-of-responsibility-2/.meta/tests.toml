@@ -1,0 +1,11 @@
+[[cases]]
+name = "spam_detection"
+input = "Buy cheap pills!"
+handlers = ["SpamHandler", "ValidatorHandler"]
+expected = "SPAM_REMOVED"
+
+[[cases]]
+name = "valid_email_flow"
+input = "Hello Team!"
+handlers = ["DisclaimerHandler", "LoggerHandler"]
+expected = "Hello Team! [DISCLAIMER]"

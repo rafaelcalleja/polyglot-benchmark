@@ -2,8 +2,9 @@
   "authors": [],
   "files": {
     "solution": ["chain_of_responsibility.py"],
-    "test": ["chain_of_responsibility_test.py"],
-    "example": [".meta/example.py"]
+    "test": ["chain_of_responsibility_test.py"], 
+    "example": [".meta/example.py"],
+    "editor": [".docs/contributing.md"]
   },
-  "blurb": "Implementa el patrón Chain of Responsibility para manejar solicitudes de procesamiento de datos."
+  "blurb": "Implementa el patrón Chain of Responsibility para procesar pagos en un sistema financiero. (Implement the Chain of Responsibility pattern to process payments in a financial system.)"
 }
