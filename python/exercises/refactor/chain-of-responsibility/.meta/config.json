@@ -1,0 +1,10 @@
+{
+  "authors": ["exercism"],
+  "contributors": [],
+  "files": {
+    "solution": ["document_processor.py"],
+    "test": ["document_processor_test.py"],
+    "example": [".meta/example.py"]
+  },
+  "blurb": "Refactor a document processing pipeline using Chain of Responsibility pattern to address large class code smell"
+}
