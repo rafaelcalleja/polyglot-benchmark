@@ -1,0 +1,65 @@
+# File Requirements:
+
+1. Start plans with [Coding Aider Plan] Use consistent naming `feature_name.md`
+2. Start checklists with [Coding Aider Plan - Checklist]  Use consistent naming `_checklist.md`
+3. Checklist items should be atomic and use markdown checkboxes (i.e. `- [ ] Taskdescription`)
+4. Ensure use consistent naming: `feature_name.md`, `_checklist.md`, `_context.yaml`
+5. Cross-reference files using markdown links
+
+## Content Guidelines:
+
+- **Plans**: High-level feature descriptions and major implementation details
+- **Checklists**: Fine-grained implementation steps
+- **Context YAML format**:
+
+  ```yaml
+  ---
+  files:
+  - path: "full/path/to/file"
+    readOnly: false
+  ```
+
+No plan exists yet. Write a detailed description of the requested feature and the needed changes.  
+The main plan file should include these sections: `## Overview`, `## Problem Description`, `## Goals`, `## Additional Notes and Constraints`, `## References`  
+Save the plan in a new markdown file with a suitable name in the `.coding-aider-plans` directory.
+Each plan must create three files in `.coding-aider-plans` using this exact pattern
+
+All plan files should be created in the `.coding-aider-plans` directory following these naming patterns:
+• Main plan: .coding-aider-plans/[feature_name].md                                                                                                                                                                                                                                                        
+• Checklist: .coding-aider-plans/[feature_name]_checklist.md                                                                                                                                                                                                                                              
+• Context file: .coding-aider-plans/[feature_name]_context.yaml
+
+Create subplans only if necessary. Use subplans when:
+
+1. A feature requires many changes across plenty of components
+2. Different team members could work on parts independently
+3. A component needs its own detailed planning
+
+**Subplan Requirements:**
+
+1. Name format: `mainplan_subfeature` (e.g. `authentication_login`)
+2. Create all three files per subplan:
+   - `mainplan_subfeature.md`
+   - `mainplan_subfeature_checklist.md`
+   - `mainplan_subfeature_context.yaml`
+3. Reference format in main plan:
+   ```markdown
+   <!-- SUBPLAN:mainplan_subfeature -->
+   [Subplan: Subfeature Name](mainplan_subfeature.md)
+   <!-- END_SUBPLAN -->
+   ```
+4. Add to main checklist: `- [ ] Complete subfeature implementation`
+5. Subplan checklists need:
+   - Atomic tasks with `- [ ]` checkboxes
+   - Implementation-specific details
+   - Clear dependency markers
+6. Ensure the main plan checklist properly delegates actual implementation to the subplans
+7. Ensure the main plan references all subplans
+8. Only create subplans if necessary
+
+Create separate checklist and `context.yaml` files for the main plan and each subplan to track the progress of implementing the plan.  
+For the `context.yaml`, consider all provided files and add relevant files to the affected `context.yaml`.  
+Only proceed with changes after creating and committing the plan files.  
+Ensure that you stick to the defined editing format when creating or editing files, e.g. only have the filepath above search blocks.  
+Make sure to commit the creation of all plan files even if you think you need additional files to implement the plan.  
+Don't start the implementation until the plan files are committed.

@@ -1,0 +1,16 @@
+---
+files:
+- path: "request_processor/.docs/instructions.md"
+  readOnly: false
+- path: "request_processor/.meta/config.json"
+  readOnly: false
+- path: "request_processor/.meta/example.py"
+  readOnly: false
+- path: "request_processor/.meta/template.j2"
+  readOnly: false
+- path: "request_processor/.meta/tests.toml"
+  readOnly: false
+- path: "request_processor/request_processor.py"
+  readOnly: false
+- path: "request_processor/request_processor_test.py"
+  readOnly: false
