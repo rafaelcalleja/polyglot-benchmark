@@ -1,0 +1,16 @@
+---
+files:
+- path: "message_processor/.docs/instructions.md"
+  readOnly: false
+- path: "message_processor/.meta/config.json"
+  readOnly: false
+- path: "message_processor/.meta/example.py"
+  readOnly: false
+- path: "message_processor/.meta/template.j2"
+  readOnly: false
+- path: "message_processor/.meta/tests.toml"
+  readOnly: false
+- path: "message_processor/message_processor.py"
+  readOnly: false
+- path: "message_processor/message_processor_test.py"
+  readOnly: false
