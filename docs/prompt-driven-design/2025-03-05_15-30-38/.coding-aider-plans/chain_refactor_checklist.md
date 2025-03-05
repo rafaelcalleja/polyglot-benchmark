@@ -1,0 +1,14 @@
+- [ ] Create exercise directory structure
+- [ ] Implement `.docs/instructions.md` with refactoring guidance
+- [ ] Configure `.meta/config.json` with proper metadata
+- [ ] Create `.meta/example.py` demonstrating Chain of Responsibility
+- [ ] Set up `.meta/tests.toml` with test cases
+- [ ] Implement `order_validator.py` starter code with Large Class
+- [ ] Create `order_validator_test.py` with initial unit tests
+- [ ] Develop handler interfaces in `chain_handler.py`
+- [ ] Implement concrete handler classes for each responsibility
+- [ ] Update tests to verify chain behavior
+- [ ] Add type hints to all Python files
+- [ ] Ensure PEP8 compliance across all code
+- [ ] Verify 100% test coverage
+- [ ] Create `.meta/template.j2` for exercise generation

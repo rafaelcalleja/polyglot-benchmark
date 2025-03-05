@@ -1,0 +1,14 @@
+---
+files:
+- path: "exercises/practice/order-validator/.docs/instructions.md"
+  readOnly: false
+- path: "exercises/practice/order-validator/.meta/config.json"
+  readOnly: false
+- path: "exercises/practice/order-validator/.meta/example.py"
+  readOnly: false
+- path: "exercises/practice/order-validator/.meta/tests.toml"
+  readOnly: false
+- path: "exercises/practice/order-validator/order_validator.py"
+  readOnly: false
+- path: "exercises/practice/order-validator/order_validator_test.py"
+  readOnly: false
