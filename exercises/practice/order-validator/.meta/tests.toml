@@ -1,0 +1,31 @@
+# This is an auto-generated file.
+#
+# Regenerating this file via `configlet sync` will:
+# - Recreate every `description` key/value pair
+# - Recreate every `reimplements` key/value pair, where they exist in problem-specifications
+# - Remove any `include = true` key/value pair (an omitted `include` key implies inclusion)
+# - Preserve any other key/value pair
+#
+# As user-added comments (using the # character) will be removed when this file
+# is regenerated, comments can be added via a `comment` key.
+
+[c78a95cb-0ed3-4576-a6a4-060d4d1438ce]
+description = "Basic order processing with no promo or region"
+
+[dbae3959-3d22-4328-9fd4-0978b2231cf4]
+description = "Order with EU region applies correct tax"
+
+[5f11a511-76a8-4adf-a15c-4b47d211d651]
+description = "Order with US region applies correct tax"
+
+[af4313fd-f35d-4dec-9f31-f9a9fa5ddc06]
+description = "Order with valid promo code applies discount"
+
+[2e1b7dea-eb56-4a42-862f-14b594b1f838]
+description = "Order with multiple handlers processes completely"
+
+[ba5c8714-0bc0-4010-9ad2-f09329172489]
+description = "Chain setup correctly passes order through all handlers"
+
+[9a884d33-7f8b-4f9f-b9db-4a584cf1d811]
+description = "Large class implementation can be refactored to chain"

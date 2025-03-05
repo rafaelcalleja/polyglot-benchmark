@@ -1,0 +1,20 @@
+{
+  "authors": [
+    "exercism"
+  ],
+  "contributors": [],
+  "files": {
+    "solution": [
+      "order_validator.py"
+    ],
+    "test": [
+      "order_validator_test.py"
+    ],
+    "example": [
+      ".meta/example.py"
+    ]
+  },
+  "blurb": "Learn about the Chain of Responsibility pattern by refactoring a large order validation class.",
+  "source": "Refactoring from Large Class to Chain of Responsibility pattern",
+  "source_url": "https://refactoring.guru/design-patterns/chain-of-responsibility"
+}
