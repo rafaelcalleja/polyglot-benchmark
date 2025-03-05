@@ -10,18 +10,24 @@ TEST_COMMAND ?= $(TEST_MODEL) $(TEST_READ_FILES) $(TEST_COMMAND_ARGS)
 RESULTS_DATE ?= $(shell date +%Y-%m-%d_%H-%M-%S)
 RESULTS_DIR ?= docs/prompt-driven-design/$(RESULTS_DATE)
 
+
 run:
 	@echo "Running tests..."
 	bash -ic "$(TEST_COMMAND) --message \"\$$(cat '$(PROMPT_FILE)')\""
 
 save:
 	@echo "Saving results..."
-	cp -R .coding-aider-plans $(RESULTS_DIR)
-	cp .aider.chat.history.md $(RESULTS_DIR)
-	cp .aider.prompt.md $(RESULTS_DIR)
-	git add $(RESULTS_DIR) -f
-	git commit -m "saved $(RESULTS_DATE)"
-
+	current_version=$$(cat VERSION); \
+	new_version=$$(echo "$$current_version" | awk -F. '{OFS="."; $$NF+=1; print}'); \
+	echo $$new_version > VERSION; \
+	mkdir -p $(RESULTS_DIR); \
+	cp -R .coding-aider-plans $(RESULTS_DIR); \
+	cp .aider.chat.history.md $(RESULTS_DIR); \
+	cp .aider.prompt.md $(RESULTS_DIR); \
+	git add $(RESULTS_DIR) -f; \
+	git add VERSION; \
+	git commit -m "saved $(RESULTS_DATE)"; \
+	git tag -a "$$new_version" -m "saved $(RESULTS_DATE)";
 
 .PHONY: all clean
 clean:
